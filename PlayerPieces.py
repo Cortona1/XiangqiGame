@@ -5,9 +5,8 @@
 #              game board pieces all inherit from the PlayerPiece class and are included in this file
 
 
-
 class PlayerPiece:
-    """Represent's an object of the one of the player's pieces in the game (chariot, elephant, general, etc)"""
+    """Represents an object of one of the player's pieces in the game (chariot, elephant, general, etc)"""
 
     def __init__(self, team, piece_name, piece_location):
         """Return's a player piece object and takes as a parameter the team the object belong's too (red or black)"""
@@ -16,7 +15,7 @@ class PlayerPiece:
         self._piece_location = piece_location
 
     def get_team(self):
-        """Returns' the pieces team it belongs too"""
+        """Returns the team the piece belongs too"""
         return self._team
 
     def get_piece(self):

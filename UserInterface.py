@@ -8,13 +8,12 @@ from XiangqiGame import XiangqiGame
 
 
 class UserInterface:
-    """Repesents the user interface object which will handle playing the game for the user while also providing
+    """Represents the user interface object which will handle playing the game for the user while also providing
     helpful display outputs for command feedback and rules"""
 
     def __init__(self):
         """Initializes the game of Xiangqi"""
         self._player_game = XiangqiGame()
-
 
     def start(self):
         """The start function for the user interface"""

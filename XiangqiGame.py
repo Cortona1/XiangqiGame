@@ -7,12 +7,13 @@
 
 from PlayerPieces import PlayerPiece, King, Guard, Elephant, Horse, Chariot, Cannon, Soldier
 
+
 class XiangqiGame:
-    """Represents an abstract game known as xiangqi with methods for getting game state, checking if a player is
+    """Represents an abstract game known as Xiangqi with methods for getting game state, checking if a player is
     in check, and method for making moves."""
 
     def __init__(self):
-        """Returns an xiangqi board game object with game state initalized to UNFINISHED and the board setup"""
+        """Returns an Xiangqi board game object with game state initalized to UNFINISHED and the board setup"""
         self._game_state = "UNFINISHED"
         self._board = []
         self._turn_counter = 1                  # keeps track of the turns, if odd it is red if even it is black
