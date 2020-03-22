@@ -73,7 +73,7 @@ class XiangqiGame:
                                     black_guard_l, black_king, black_guard_r, black_elephant_r, black_horse_r, black_chariot_r])
             else:
                 self._board.append(["", "", "", "", "", "", "", "", ""])
-            
+
             self._board_key = {"a" : 0, "b" : 1, "c" : 2, "d" : 3, "e" : 4, "f" : 5, "g" : 6, "h" : 7, "i" : 8}
             #the board key contains the corresponding columns for letters
 
@@ -380,6 +380,7 @@ class XiangqiGame:
             return True
 
         return False
+
 
 
 
