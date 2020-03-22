@@ -1,8 +1,16 @@
+# Author: Anthony Corton
+# Date: 02/22/2020
+# Description: Contains a class named UserInterface for an abstract game known as Xiangqi. The class contains
+#              methods for introducing the player to the game, displaying game rules, and prompting for user input
+#              for coordinates. A results message will be displayed at the end of the game
 
 from XiangqiGame import XiangqiGame
 
-class UserInterface:
 
+class UserInterface:
+    """Repesents the user interface object which will handle playing the game for the user while also providing
+    helpful display outputs for command feedback and rules"""
+    
     def __init__(self):
         """Initializes the game of Xiangqi"""
         self._player_game = XiangqiGame()
@@ -19,7 +27,6 @@ class UserInterface:
         print("************************************************** \n" +
               "      Welcome to the game of Xiangqi ! ^_^ \n" + "************************************************** \n")
 
-
     def game_rules(self):
         """Displays a brief description of the game rules to the player"""
         print("Rules: \n" + " 1) Player red goes first \n" + " 2) Generals aren't allowed to see each other \n" +
@@ -33,7 +40,6 @@ class UserInterface:
                                                                  "entered and specified by using algebraic notation "
                                                                  "with columns a-i and rows 1-10, with row 1 being the"
                                                                  "Red side and row 10 the Black side \n")
-
 
     def ask_user(self):
         """Ask the user for coordinates to enter for the player moves"""
@@ -50,8 +56,7 @@ class UserInterface:
             else:
                 print("The move was valid")
 
-
-        print("That concludes the game")
+        print("That concludes the game ")
         print("Results are the following")
         print(self._player_game.get_game_state())
 

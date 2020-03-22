@@ -1,3 +1,11 @@
+# Author: Anthony Corton
+# Date: 02/22/2020
+# Description: Contains a class named PlayerPiece for an abstract game known as Xiangqi. The class contains
+#              methods for getting team, piece, legal move, and setting and getting piece location. The 7 distinct
+#              game board pieces all inherit from the PlayerPiece class and are included in this file
+
+
+
 class PlayerPiece:
     """Represent's an object of the one of the player's pieces in the game (chariot, elephant, general, etc)"""
 
