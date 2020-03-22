@@ -78,5 +78,6 @@ class UserInterface:
                                    " next move: ")
 
         if board_decision == "yes":
+            print()
             self._player_game.display_game_state()
             print()

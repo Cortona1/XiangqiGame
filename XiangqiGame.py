@@ -110,7 +110,7 @@ class XiangqiGame:
                 if issubclass(row_list[row_counter][column_counter].__class__, PlayerPiece) is True:
                     print(row_list[row_counter][column_counter].get_piece(), end=' ')
                 else:
-                    print('"     "', end = ' ')
+                    print('"_____"', end = ' ')
                 column_counter += 1
             print("")
             row_counter += 1             # reset column counter so it starts from column 0 again
