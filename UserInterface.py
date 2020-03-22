@@ -38,12 +38,15 @@ class UserInterface:
                 " a loss for the player that is stalemated \n" + " 6) Locations on the board and coordinates will be "
                                                                  "entered and specified by using algebraic notation "
                                                                  "with columns a-i and rows 1-10, with row 1 being the"
-                                                                 "Red side and row 10 the Black side \n")
+                                                                 " Red side and row 10 the Black side \n")
 
     def ask_user(self):
         """Ask the user for coordinates to enter for the player moves"""
 
         while self._player_game.get_game_state() == "UNFINISHED":
+
+            self.print_board()
+
             piece_starting_location = input("Please enter the location of the piece being moved: ")
             piece_moving_location = input("Please enter the location the piece will be moved to: ")
             test_move = self._player_game.make_move(piece_starting_location, piece_moving_location)
@@ -61,5 +64,19 @@ class UserInterface:
 
 
 
+    def print_board(self):
+        """Prompts to ask the user if they would like to print the board before making their next move"""
 
+        board_decision = input("If you would like to print out the board before placing a move please enter Yes"
+                               " otherwise enter No: ")
 
+        board_decision = board_decision.lower()
+        print(board_decision)
+
+        while board_decision != "yes" and board_decision != "no":
+            board_decision = input("Please re-enter if you would like to print the board or not before making your"
+                                   " next move: ")
+
+        if board_decision == "yes":
+            self._player_game.display_game_state()
+            print()
