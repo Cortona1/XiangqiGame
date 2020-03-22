@@ -45,6 +45,7 @@ class UserInterface:
 
         while self._player_game.get_game_state() == "UNFINISHED":
 
+            self.display_player_turn()
             self.print_board()
 
             piece_starting_location = input("Please enter the location of the piece being moved: ")
@@ -56,13 +57,11 @@ class UserInterface:
                       "coordinates are invalid, the piece is blocked, and or there is no piece at the starting location")
 
             else:
-                print("The move was valid")
+                print("The move was valid \n")
 
         print("That concludes the game ")
         print("Results are the following")
         print(self._player_game.get_game_state())
-
-
 
     def print_board(self):
         """Prompts to ask the user if they would like to print the board before making their next move"""
@@ -71,7 +70,6 @@ class UserInterface:
                                " otherwise enter No: ")
 
         board_decision = board_decision.lower()
-        print(board_decision)
 
         while board_decision != "yes" and board_decision != "no":
             board_decision = input("Please re-enter if you would like to print the board or not before making your"
@@ -81,3 +79,12 @@ class UserInterface:
             print()
             self._player_game.display_game_state()
             print()
+
+
+    def display_player_turn(self):
+        """Displays the player whos turn it currently is"""
+
+        if self._player_game._turn_counter % 2 != 0:
+            print("************************ \n" +"It is player Red's turn \n" + "************************ \n")
+        else:
+            print("************************ \n" +"It is player Black's turn \n" + "************************ \n")
